@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Library Management system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4a6b82;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .sub-header {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .feature {
+            background-color: #ffffff;
+            color: #4a6b82;
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            text-align: center;
+        }
+        .feature i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            margin: 0;
+            font-weight: bold;
+        }
+        .highlighted-features {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .highlighted-features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .highlighted-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .highlighted-features li::before {
+            content: "•";
+            color: #ffffff;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #3b4f63;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: #f0c040;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Welcome to Library Management System</div>
+        <div class="sub-header">A system that enables library administrator to manage members, manage books, manage issue book details and handle returns</div>
+       
+       
+        <div class="features">
+
+
+
+            
+        <a href="manage member.html">
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <p>Manage Members</p>
+            </div>
+        </a>
+
+
+
+        <a href="managebook.html">
+            <div class="feature">
+                <i class="fas fa-book"></i>
+                <p>Manage Books</p>
+            </div>
+
+        </a>
+
+
+
+        <a href="issuehanle.html">
+            <div class="feature">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Issue Books</p>
+            </div>
+        </a>
+
+
+
+        <a href="handle return.html">
+
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <p>Handle Returns</p>
+            </div>
+        </a>
+
+
+
+        </div>
+        <div class="highlighted-features">
+            <p>Highlighted features of the system,</p>
+            <ul>
+                <li>Members are registered to the system by UUID, and no two members can have the same contact number.</li>
+                <li>Books are registered to the system by international standard book number (isbn).</li>
+                <li>When members take books from the library they will receive an issue note.</li>
+                <li>The issue note contains all the take away book ISBNs along with the member UUID.</li>
+                <li>All issue notes have unique issue id to uniquely identify them when the books are returned.</li>
+                <li>Issue note can only have maximum 3 distinct ISBNs.</li>
+                <li>A member cannot take the same book from the system twice at the same time or at two different times (with another issue note).</li>
+                <li>A member can only take maximum of 3 different books from the system. If he/she needs another, he/she must return a book that he/she already got.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        Library Management System - v1.0.0 | Copyright © 2023 <a href="#">PubuduJ</a>. All rights reserved.
+    </div>
+</body>
+</html>

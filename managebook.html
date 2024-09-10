@@ -1,0 +1,197 @@
+<html>
+<head>
+    <title>Manage Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #34495e;
+            font-size: 24px;
+        }
+        .header i {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+        .left-panel {
+            flex: 2;
+            padding: 20px;
+        }
+        .right-panel {
+            flex: 1;
+            background-color: #3b5998;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-bar i {
+            font-size: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #7f8c8d;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #34495e;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+        .view-book {
+            display: flex;
+            flex-direction: column;
+        }
+        .view-book h2 {
+            margin-bottom: 20px;
+        }
+        .view-book .close {
+            align-self: flex-end;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .view-book .field {
+            margin-bottom: 20px;
+        }
+        .view-book .field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .view-book .field input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        .view-book .field .readonly {
+            color: #f1c40f;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fas fa-book"></i>
+        Manage Books
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="search-bar">
+                <input type="text" placeholder="Search books">
+                <i class="fas fa-search"></i>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Copies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>978-3-16-148410-0</td>
+                        <td>Enterprise Application Architecture</td>
+                        <td>Martin Fowler</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>978-3-16-148410-1</td>
+                        <td>Application Architecture</td>
+                        <td>Microsoft</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>978-3-16-148410-2</td>
+                        <td>Clean Code</td>
+                        <td>Robert Martin</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>978-3-16-148410-3</td>
+                        <td>MongoDB Specification</td>
+                        <td>MongoDB Inc</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>978-3-16-148410-4</td>
+                        <td>Introduction to Cloud Computing</td>
+                        <td>Martin Robert</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right-panel">
+            <div class="view-book">
+                <div class="close">&times;</div>
+                <h2>View Book</h2>
+                <div class="field">
+                    <label>Book ISBN *</label>
+                    <input type="text" >
+                    <div class="readonly"></div>
+                </div>
+                <div class="field">
+                    <label>Book Title *</label>
+                    <input type="text">
+                    <div class="readonly"></div>
+                </div>
+                <div class="field">
+                    <label>Book Author *</label>
+                    <input type="text">
+                    <div class="readonly"></div>
+                </div>
+                <div class="field">
+                    <label>Book Copies *</label>
+                    <input type="text">
+                    <div class="readonly"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Library Management System - v1.0.0 | Copyright © 2023 <a href="#">PubuduJ</a>. All rights reserved.
+    </div>
+</body>
+</html>
